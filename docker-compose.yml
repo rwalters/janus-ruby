@@ -3,19 +3,15 @@ version: '2.1'
 services:
   client:
     build:
-      context: ./
-    command: '/bin/bash'
-    volumes:
-      - ./:/app
+      context: .
+    command: '/app/bin/console'
     ports:
       - "3001:3001"
     depends_on:
       - server
   server:
     build:
-      context: ./
+      context: .
     command: ['bundle', 'exec', 'shotgun', '-p', '3002', '-o', '0.0.0.0', '/app/config_server.ru']
-    volumes:
-      - ./:/app
     ports:
       - "3002:3002"

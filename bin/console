@@ -1,0 +1,3 @@
+#!/bin/sh
+
+irb -r './boot' -r 'janus/client' -r 'janus_client_initializer'
