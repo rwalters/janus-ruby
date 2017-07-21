@@ -14,7 +14,7 @@ services:
   server:
     build:
       context: ./
-    command: ['bundle', 'exec', 'shotgun', '-p', '3002', '-o', '0.0.0.0', '/app/config.ru']
+    command: ['bundle', 'exec', 'shotgun', '-p', '3002', '-o', '0.0.0.0', '/app/config_server.ru']
     volumes:
       - ./:/app
     ports:
